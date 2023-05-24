@@ -1,0 +1,55 @@
+.root{
+    -fx-font-family:"sansserif";
+}
+.lbl1{
+    -fx-text-fill: linear-gradient(to bottom, white 40%, #5a5555 100%);
+}
+
+.login-container{
+    -fx-background-color:rgba(41,57,60,0.8);
+    -fx-background-radius:20;
+}
+.buttons{
+    -fx-background-radius:10;
+    -fx-background-color:#172022;
+    -fx-opacity:.8;
+    -fx-pref-width:181;
+    -fx-pref-height:2em;
+    -fx-text-fill:white;
+    -fx-cursor:hand;
+}
+/* hawks animation */
+.img1,.img2,.img3,.img4,.img5,.img6,.img8{
+    -fx-min-width:368;
+    -fx-min-height:312;
+}
+.img1{
+    -fx-background-image:url("../Images/animated-hawks/img1.png");
+    -fx-background-size:cover;
+
+}
+.img2{
+    -fx-background-image:url("../Images/animated-hawks/img2.png");
+    -fx-background-size:cover;
+}
+.img3{
+    -fx-background-image:url("../Images/animated-hawks/img3.png");
+    -fx-background-size:cover;
+}
+.img4{
+    -fx-background-image:url("../Images/animated-hawks/img4.png");
+    -fx-background-size:cover;
+}
+.img5{
+    -fx-background-image:url("../Images/animated-hawks/img5.png");
+    -fx-background-size:cover;
+}
+.img6{
+    -fx-background-image:url("../Images/animated-hawks/img6.png");
+    -fx-background-size:cover;
+}
+
+.hb-layout{
+    -fx-translate-x:-5;
+    -fx-translate-y:100;
+}

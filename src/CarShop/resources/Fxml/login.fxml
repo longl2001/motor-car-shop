@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="880.0" styleClass="background-image" stylesheets="@../Styles/login.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarShop.Control.LoginController">
+   <children>
+      <HBox fx:id="hBox" prefHeight="584.0" prefWidth="880.0" style="-fx-background-color: white;">
+         <children>
+            <VBox alignment="CENTER" prefHeight="584.0" prefWidth="384.0" style="-fx-background-color: black;">
+               <children>
+                  <ImageView fx:id="logoImg" fitHeight="353.0" fitWidth="347.0" pickOnBounds="true" preserveRatio="true">
+
+                     <VBox.margin>
+                        <Insets top="-64.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../Images/logo/project_logo/Motor%20master.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <StackPane>
+               <children>
+                  <VBox fx:id="loginPane" alignment="TOP_CENTER" prefHeight="584.0" prefWidth="552.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="98.0" text="Welcome Back!">
+                           <VBox.margin>
+                              <Insets top="92.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" maxHeight="40.0" prefHeight="40.0" prefWidth="524.0">
+                           <children>
+                              <Label fx:id="warningLbl" alignment="CENTER" maxHeight="32.0" minHeight="40.0" minWidth="196.0" style="-fx-background-color: #fadce0; -fx-text-fill: #85333f; -fx-background-size: 12;" text="Incorrect username or password." visible="false">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Pane prefHeight="40.0">
+                           <children>
+                              <TextField fx:id="username" focusTraversable="false" layoutX="164.0" prefHeight="40.0" prefWidth="196.0" style="-fx-background-color: #f9fbfc;">
+                                 <padding>
+                                    <Insets left="8.0" />
+                                 </padding>
+                              </TextField>
+                              <Label fx:id="emailLbl" disable="true" layoutX="178.0" layoutY="13.0" text="Email" textFill="#aba2a2" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="48.0" />
+                           </padding>
+                        </Pane>
+                        <Pane prefHeight="40.0">
+                           <children>
+                              <PasswordField fx:id="password" focusTraversable="false" layoutX="164.0" prefHeight="40.0" prefWidth="196.0" style="-fx-background-color: #f9fbfc;">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="8.0" />
+                                 </padding>
+                              </PasswordField>
+                              <Label fx:id="passwordLbl" disable="true" layoutX="178.0" layoutY="13.0" text="Password" textFill="#aba2a2" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="32.0" />
+                           </VBox.margin>
+                        </Pane>
+                        <Pane prefHeight="24.0">
+                           <children>
+                              <CheckBox layoutX="164.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Remember" textFill="#8d8888">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </CheckBox>
+                              <Label layoutX="276.0" text="Forgot password?" textFill="#9a9494">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                        </Pane>
+                        <HBox alignment="TOP_CENTER" prefHeight="36.0" prefWidth="524.0">
+                           <children>
+                              <Button fx:id="loginBtn" mnemonicParsing="false" prefWidth="196.0" style="-fx-background-color: black;" text="Login" textFill="WHITE" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="36.0" prefWidth="524.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefWidth="196.0" style="-fx-background-color: #f9fbfc;" text="Sign in with Google" textFill="#7c7c7c" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="524.0">
+                           <children>
+                              <Label text="Don't have an account? ">
+                                 <HBox.margin>
+                                    <Insets left="164.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="enrollLbl" text="Sign up" underline="true">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="signupPane" alignment="TOP_CENTER" prefHeight="584.0" prefWidth="552.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <Label text="Create your account to start with Motor Master" textFill="#c6c3c3">
+                           <VBox.margin>
+                              <Insets top="128.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="40.0">
+                           <children>
+                              <TextField fx:id="fname" focusTraversable="false" layoutX="164.0" prefHeight="40.0" prefWidth="196.0" style="-fx-background-color: #f9fbfc;" />
+                              <Label fx:id="fnameLbl" disable="true" layoutX="178.0" layoutY="13.0" text="First Name" textFill="#aba2a2" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="48.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="48.0" />
+                           </padding>
+                        </Pane>
+                        <Pane prefHeight="40.0">
+                           <children>
+                              <TextField fx:id="lname" focusTraversable="false" layoutX="164.0" prefHeight="40.0" prefWidth="196.0" style="-fx-background-color: #f9fbfc;" />
+                              <Label fx:id="lnameLbl" disable="true" layoutX="178.0" layoutY="13.0" text="Last Name" textFill="#aba2a2" />
+                           </children>
+                           <padding>
+                              <Insets left="48.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                        </Pane>
+                        <Pane prefHeight="40.0">
+                           <children>
+                              <TextField fx:id="signupEmail" focusTraversable="false" layoutX="164.0" prefHeight="40.0" prefWidth="196.0" style="-fx-background-color: #f9fbfc;" />
+                              <Label fx:id="emailLbl2" disable="true" layoutX="178.0" layoutY="13.0" text="Email" textFill="#aba2a2" />
+                           </children>
+                           <padding>
+                              <Insets left="48.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                        </Pane>
+                        <Pane prefHeight="40.0">
+                           <children>
+                              <TextField fx:id="signupPass" focusTraversable="false" layoutX="164.0" prefHeight="40.0" prefWidth="196.0" style="-fx-background-color: #f9fbfc;" />
+                              <Label fx:id="passwordLbl2" disable="true" layoutX="178.0" layoutY="13.0" text="Password" textFill="#aba2a2" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                        </Pane>
+                        <HBox alignment="TOP_CENTER" prefHeight="36.0" prefWidth="524.0">
+                           <children>
+                              <Button fx:id="signupBtn" mnemonicParsing="false" prefWidth="196.0" style="-fx-background-color: black;" text="Sign Up" textFill="WHITE" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="36.0" prefWidth="524.0">
+                           <children>
+                              <Label text="Already have an account?" />
+                              <Label fx:id="loginLbl" text="Login" underline="true">
+                                 <HBox.margin>
+                                    <Insets left="8.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+      <HBox fx:id="imgPane" maxWidth="880.0" prefHeight="584.0" prefWidth="880.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="440.0">
+               <children>
+                  <Label fx:id="heading" opacity="0.0" prefHeight="226.0" prefWidth="335.0" style="-fx-font-size: 72; -fx-font-weight: bold; -fx-scale-x: 1; -fx-scale-y: 1;" styleClass="lbl1" text="MOTOR &#10;MASTER" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="100.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text1" opacity="0.0" style="-fx-font-size: 20; -fx-text-fill: #8d8d8d;" text="Explore the best car options " textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text2" opacity="0.0" style="-fx-font-size: 20; -fx-text-fill: #8d8d8d;" text="#1 CAR PLATFORM" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="16.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="64.0" />
+               </padding>
+            </VBox>
+            <Pane prefWidth="440.0">
+               <children>
+                  <HBox fx:id="img1" opacity="0.0" styleClass="hb-layout">
+                     <children>
+                        <Pane maxWidth="374.0" prefHeight="332.0" prefWidth="374.0" styleClass="img1" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="img2" alignment="CENTER" opacity="0.0" scaleX="0.7" scaleY="0.7" styleClass="hb-layout">
+                     <children>
+                        <Pane maxWidth="346.0" minWidth="388.0" prefHeight="305.0" prefWidth="388.0" styleClass="img2" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="img3" opacity="0.0" styleClass="hb-layout">
+                     <children>
+                        <Pane maxWidth="346.0" prefHeight="305.0" prefWidth="346.0" styleClass="img3" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="img4" opacity="0.0" styleClass="hb-layout">
+                     <children>
+                        <Pane maxWidth="346.0" prefHeight="305.0" prefWidth="346.0" styleClass="img4" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="img5" styleClass="hb-layout" visible="false">
+                     <children>
+                        <Pane maxWidth="346.0" prefHeight="305.0" prefWidth="346.0" styleClass="img5" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="img6" opacity="0.0" styleClass="hb-layout">
+                     <children>
+                        <Pane maxWidth="388.0" prefHeight="332.0" prefWidth="388.0" styleClass="img6" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

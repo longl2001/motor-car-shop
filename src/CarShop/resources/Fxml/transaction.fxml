@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="800.0" maxWidth="1104.0" minHeight="800.0" minWidth="1104.0" prefHeight="800.0" prefWidth="1104.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fxml.Transaction">
+   <children>
+      <VBox prefHeight="800.0" prefWidth="1104.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="32.0" prefWidth="1104.0">
+               <children>
+                  <Label text="Transaction">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="1104.0">
+               <children>
+                  <Label text="Statistics">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="32.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="1104.0" spacing="32.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="240.0" style="-fx-background-color: white;">
+                     <children>
+                        <FontAwesomeIcon glyphName="MONEY" size="3em">
+                           <HBox.margin>
+                              <Insets left="32.0" right="16.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="166.0">
+                           <children>
+                              <Label text="Total spend">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="\$433,000">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="240.0" style="-fx-background-color: white;">
+                     <children>
+                        <FontAwesomeIcon glyphName="MONEY" size="3em">
+                           <HBox.margin>
+                              <Insets left="32.0" right="16.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="166.0">
+                           <children>
+                              <Label text="Total spend">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="\$433,000">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="240.0" style="-fx-background-color: white;">
+                     <children>
+                        <FontAwesomeIcon glyphName="MONEY" size="3em">
+                           <HBox.margin>
+                              <Insets left="32.0" right="16.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="166.0">
+                           <children>
+                              <Label text="Total spend">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="\$433,000">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="240.0" style="-fx-background-color: white;">
+                     <children>
+                        <FontAwesomeIcon glyphName="MONEY" size="3em">
+                           <HBox.margin>
+                              <Insets left="32.0" right="16.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="166.0">
+                           <children>
+                              <Label text="Total spend">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="\$433,000">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="1104.0">
+               <children>
+                  <Label text="Recent transaction">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="32.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox prefHeight="384.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="200.0" spacing="32.0" style="-fx-border-color: white;">
+                     <children>
+                        <Label text="Summary">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Deposit">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Widthdraw">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Spend">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Receive">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Statements">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="16.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="48.0" prefWidth="200.0" spacing="32.0">
+                     <children>
+                        <Label text="Date">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Type">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Item">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Amount">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Fee">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Total Amount">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Status">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="32.0" top="32.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

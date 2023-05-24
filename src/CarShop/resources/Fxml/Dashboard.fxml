@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1104.0" style="-fx-background-color: white;" stylesheets="@../Styles/dashboard2.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarShop.Control.DashboardController">
+   <children>
+      <VBox layoutX="25.0" layoutY="25.0" prefHeight="704.0" prefWidth="1104.0" style="-fx-background-color: #dddfdf; -fx-background-radius: 30 0 0 30;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <HBox maxWidth="1040.0" prefHeight="640.0" prefWidth="1040.0" spacing="32.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="300.0" spacing="32.0" style="-fx-background-radius: 20;">
+                     <children>
+                        <StackPane fx:id="pane" alignment="TOP_LEFT" prefHeight="408.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label style="-fx-font-size: 22;" text="\$ ">
+                                       <HBox.margin>
+                                          <Insets top="32.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="9.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="portfolioLbl" style="-fx-font-size: 22;" textFill="#6b6666">
+                                       <HBox.margin>
+                                          <Insets top="32.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="24.0" top="24.0" />
+                                 </padding>
+                              </HBox>
+                              <Label id="portfolio" style="-fx-font-size: 20;" styleClass="heading-fonts" text="PORTFOLIO">
+                                 <StackPane.margin>
+                                    <Insets left="24.0" top="24.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <HBox maxHeight="24.0" prefHeight="24.0" prefWidth="300.0">
+                                 <children>
+                                    <FontAwesomeIcon fill="#5ec933" glyphName="SORT_UP" size="2em" textAlignment="CENTER" wrappingWidth="22.090060234069824" />
+                                    <Label fx:id="priceChangeLbl" style="-fx-font-size: 12;" text=" 2,300.23 (5.32%)" textFill="#5ec933">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets left="24.0" top="88.0" />
+                                 </StackPane.margin>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" style="-fx-font-size: 11; -fx-background-color: white; -fx-border-color: #aea5a4;" text="1D">
+                                       <HBox.margin>
+                                          <Insets bottom="24.0" left="24.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <LineChart fx:id="lineChart3" createSymbols="false" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" legendSide="TOP" legendVisible="false" maxHeight="216.0" prefHeight="298.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-alternative-column-fill-visible: false;" styleClass="chart-series-line" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+                                <xAxis>
+                                  <CategoryAxis gapStartAndEnd="false" opacity="0.0" prefHeight="0.0" prefWidth="248.0" side="BOTTOM" startMargin="0.0" tickLabelGap="1.0" tickLabelsVisible="false" tickMarkVisible="false" visible="false" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis lowerBound="-1000.0" minorTickCount="0" minorTickVisible="false" prefWidth="0.0" side="LEFT" tickLabelGap="5.0" tickLabelsVisible="false" tickLength="10.0" tickMarkVisible="false" upperBound="1000.0" />
+                                </yAxis>
+                                 <StackPane.margin>
+                                    <Insets top="120.0" />
+                                 </StackPane.margin>
+                                 <padding>
+                                    <Insets left="16.0" right="16.0" />
+                                 </padding>
+                              </LineChart>
+                           </children>
+                           <effect>
+                              <DropShadow height="24.22" offsetX="4.0" offsetY="4.0" radius="11.485" width="23.72">
+                                 <color>
+                                    <Color opacity="0.10000000149011612" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </StackPane>
+                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+                           <children>
+                              <HBox prefHeight="18.0" prefWidth="252.0">
+                                 <children>
+                                    <Label id="balance" prefHeight="37.0" prefWidth="132.0" styleClass="heading-fonts" text="BALANCE" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="23.0" prefWidth="352.0">
+                                 <children>
+                                    <Label fx:id="balanceLbl1" prefHeight="26.0" prefWidth="20.0" style="-fx-font-size: 20;" text="\$">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </Label>
+
+                                    
+                                    <Label fx:id="balanceLbl" prefHeight="26.0" prefWidth="180.0" style="-fx-font-size: 20;" text="0">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="16.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <VBox>
+                                 <children>
+                                    <HBox maxHeight="10.0" prefHeight="34.0" prefWidth="113.0">
+                                       <children>
+                                          <FontAwesomeIcon fill="#5ec933" glyphName="SORT_UP" size="2em" textAlignment="CENTER" wrappingWidth="22.090060234069824">
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                          <Label fx:id="balPercentage" style="-fx-font-size: 16;" text=" 5.32%" textFill="#5ec933" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="2.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow height="25.45" offsetX="5.0" offsetY="5.0" radius="11.8525" width="23.96">
+                                 <color>
+                                    <Color opacity="0.10000000149011612" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="376.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+                     <children>
+                        <VBox maxHeight="400.0" maxWidth="282.0" minWidth="264.0" prefHeight="176.0" prefWidth="282.0" style="-fx-background-color: #000b37; -fx-background-radius: 20; -fx-translate-y: 0;">
+                           <children>
+                              <Text fill="#fefefe" strokeType="OUTSIDE" strokeWidth="0.0" text="Bank of America">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox maxWidth="32.0" prefHeight="24.0" prefWidth="197.0" style="-fx-background-color: #d2cecf;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="16.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Text fill="#fefefe" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-line-spacing: 0;" text="**** **** **** 4555">
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="12/28">
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox alignment="CENTER_LEFT" spacing="128.0">
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Text fill="#fefefe" strokeType="OUTSIDE" strokeWidth="0.0" text="Long Le" />
+                                    <Text fill="#fefefe" strokeType="OUTSIDE" strokeWidth="0.0" text="VISA" textAlignment="RIGHT">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="22.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="24.0" right="24.0" top="16.0" />
+                           </padding>
+                           <effect>
+                              <InnerShadow height="139.61" offsetX="-10.0" offsetY="10.0" radius="69.98500000000001" width="142.33" />
+                           </effect>
+                        </VBox>
+                        <StackPane prefHeight="45.0" prefWidth="296.0" style="-fx-background-color: #f3f5f7; -fx-background-radius: 10;">
+                           <VBox.margin>
+                              <Insets top="32.0" />
+                           </VBox.margin>
+                           <children>
+                              <HBox fx:id="depositLayer" maxHeight="40.0" maxWidth="148.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 10;">
+                                 <StackPane.margin>
+                                    <Insets right="146.0" />
+                                 </StackPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" maxHeight="40.0" prefHeight="48.0" prefWidth="376.0" style="-fx-background-color: transparent; -fx-background-radius: 10;">
+                                 <children>
+                                    <Button fx:id="depositBtn" mnemonicParsing="false" prefHeight="45.0" prefWidth="188.0" style="-fx-background-color: #001035; -fx-background-radius: 10; -fx-font-size: 14;" text="Deposit" textFill="WHITE">
+                                       <font>
+                                          <Font size="7.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="withdrawBtn" mnemonicParsing="false" prefHeight="68.0" prefWidth="188.0" style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-font-size: 14;" text="Withdraw" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </StackPane>
+                        <HBox>
+                           <VBox.margin>
+                              <Insets top="24.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label prefHeight="10.0" style="-fx-font-size: 10;" text="Choose card" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="48.0" style="-fx-background-color: #f3f5f7; -fx-background-radius: 10;">
+                           <children>
+                              <Label text="**** **** **** 4555">
+                                 <HBox.margin>
+                                    <Insets left="78.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <FontAwesomeIcon glyphName="ANGLE_DOUBLE_UP" size="2em">
+                                 <HBox.margin>
+                                    <Insets left="56.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIcon>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="328.0">
+                           <children>
+                              <Label style="-fx-font-weight: normal; -fx-font-size: 10;" text="Minimum transaction is $50" textFill="#0000007f" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="24.0" prefWidth="328.0">
+                           <children>
+                              <Label prefWidth="164.0" style="-fx-font-size: 10;" text="Amount" />
+                              <Label prefWidth="164.0" style="-fx-font-size: 10;" text="Expected delivery">
+                                 <HBox.margin>
+                                    <Insets left="16.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="24.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="48.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER" prefWidth="156.0" style="-fx-background-color: #f3f5f7;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="16.0" text="\$" textAlignment="CENTER">
+                                       <HBox.margin>
+                                          <Insets left="8.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="depositField" prefHeight="32.0" prefWidth="132.0" promptText="500" style="-fx-background-color: transparent;" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefWidth="156.0" style="-fx-background-color: #f3f5f7;">
+                                 <HBox.margin>
+                                    <Insets left="16.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <FontAwesomeIcon glyphName="CALENDAR">
+                                       <HBox.margin>
+                                          <Insets left="16.0" />
+                                       </HBox.margin>
+                                    </FontAwesomeIcon>
+                                    <Label text="04/30/2023">
+                                       <HBox.margin>
+                                          <Insets left="8.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label fx:id="warningLbl" prefHeight="9.0" prefWidth="218.0" text="Please enter a valid number" textFill="#a44141" visible="false" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="32.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Button fx:id="submitBtn" mnemonicParsing="false" prefHeight="43.0" prefWidth="296.0" style="-fx-background-radius: 10; -fx-background-color: #000b37;" styleClass="vibing-button" text="Submit Order" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="40.0" left="40.0" right="40.0" top="32.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow height="22.82" offsetY="5.0" radius="11.877500000000001" spread="0.21" width="26.69">
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="300.0" spacing="32.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" minHeight="200.0" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+                           <children>
+                              <StackPane fx:id="pieChartContainer" alignment="TOP_LEFT" maxHeight="200.0" prefHeight="200.0" prefWidth="284.0">
+                                 <children>
+                                    <PieChart fx:id="pieChart" maxHeight="168.0" maxWidth="284.0" prefHeight="200.0" prefWidth="288.0" styleClass="chart-pie-label" titleSide="BOTTOM">
+                                       <StackPane.margin>
+                                          <Insets left="8.0" top="16.0" />
+                                       </StackPane.margin>
+                                    </PieChart>
+                                    <Label id="inventory" style="-fx-font-size: 20;" styleClass="heading-fonts" text="INVENTORY">
+                                       <StackPane.margin>
+                                          <Insets left="24.0" top="24.0" />
+                                       </StackPane.margin>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                           <effect>
+                              <DropShadow height="26.93" offsetX="4.0" offsetY="4.0" radius="12.965" width="26.93">
+                                 <color>
+                                    <Color opacity="0.10000000149011612" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </VBox>
+                        <VBox prefHeight="408.0" prefWidth="232.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+                           <padding>
+                              <Insets bottom="24.0" left="24.0" right="16.0" top="24.0" />
+                           </padding>
+                           <children>
+                              <Label id="rank" style="-fx-font-size: 20;" styleClass="heading-fonts" text="RANK">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <ScrollPane hbarPolicy="NEVER" hvalue="1.0" maxWidth="260.0" prefWidth="260.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" vbarPolicy="NEVER">
+                                 <content>
+                                    <VBox fx:id="rankContainer" maxWidth="260.0" prefWidth="260.0" spacing="16.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <HBox fx:id="rank1" alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <Label fx:id="rankVal1" alignment="CENTER" prefHeight="20.0" prefWidth="24.0" style="-fx-font-size: 14;" text="3">
+                                                   <font>
+                                                      <Font size="5.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER" maxHeight="32.0" maxWidth="32.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #f5f7f9; -fx-background-radius: 50%;">
+                                                   <children>
+                                                      <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../Images/logo/car_logo/bugatti-logo.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                                <VBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <Label fx:id="name1" prefHeight="12.0" style="-fx-font-size: 8;" text="TESLA MODEL S">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <StackPane alignment="CENTER_RIGHT">
+                                                         <VBox.margin>
+                                                            <Insets top="4.0" />
+                                                         </VBox.margin>
+                                                         <children>
+                                                            <HBox prefHeight="12.0" prefWidth="136.0" style="-fx-background-color: #e7e9ec; -fx-background-radius: 10;">
+                                                               <children>
+                                                                  <HBox alignment="CENTER_RIGHT" prefHeight="12.0" prefWidth="115.0" style="-fx-background-color: #9e465c; -fx-background-radius: 20 0 0 20;" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="8.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="32.0" prefWidth="31.0" />
+                                                <VBox alignment="CENTER" prefHeight="32.0" prefWidth="19.0">
+                                                   <children>
+                                                      <Label style="-fx-font-size: 12;" text="6">
+                                                         <graphic>
+                                                            <FontAwesomeIcon glyphName="EJECT" size=".8em" />
+                                                         </graphic>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <effect>
+                                                <DropShadow height="1.0" offsetY="2.0" radius="0.0" width="0.0">
+                                                   <color>
+                                                      <Color red="0.6800000071525574" green="0.63919997215271" blue="0.63919997215271" opacity="0.29118773341178894" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox fx:id="rank2" alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <Label fx:id="rankVal2" alignment="CENTER" prefHeight="20.0" prefWidth="24.0" style="-fx-font-size: 14;" text="1">
+                                                   <font>
+                                                      <Font size="5.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER" maxHeight="32.0" maxWidth="32.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 50%;">
+                                                   <children>
+                                                      <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../Images/logo/car_logo/tesla-logo.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                                <VBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <Label fx:id="name2" style="-fx-font-size: 8;" text="TESLA MODEL S">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <StackPane alignment="CENTER_RIGHT">
+                                                         <VBox.margin>
+                                                            <Insets top="4.0" />
+                                                         </VBox.margin>
+                                                         <children>
+                                                            <HBox prefHeight="12.0" prefWidth="136.0" style="-fx-background-color: #e7e9ec; -fx-background-radius: 10;">
+                                                               <children>
+                                                                  <HBox alignment="CENTER_RIGHT" prefHeight="12.0" prefWidth="103.0" style="-fx-background-color: #7e7e7e; -fx-background-radius: 20 0 0 20;" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="8.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="32.0" prefWidth="31.0" />
+                                                <VBox alignment="CENTER" prefHeight="32.0" prefWidth="19.0">
+                                                   <children>
+                                                      <Label style="-fx-font-size: 12;" text="6">
+                                                         <graphic>
+                                                            <FontAwesomeIcon glyphName="EJECT" size=".8em" />
+                                                         </graphic>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <effect>
+                                                <DropShadow height="1.0" offsetY="2.0" radius="0.0" width="0.0">
+                                                   <color>
+                                                      <Color red="0.6800000071525574" green="0.63919997215271" blue="0.63919997215271" opacity="0.29118773341178894" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </HBox>
+                                          <HBox fx:id="rank3" alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <Label fx:id="rankVal3" alignment="CENTER" prefHeight="20.0" prefWidth="24.0" style="-fx-font-size: 14;" text="2">
+                                                   <font>
+                                                      <Font size="5.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER" maxHeight="32.0" maxWidth="32.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 50%;">
+                                                   <children>
+                                                      <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../Images/logo/car_logo/Rolls-Royce-Logo.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                                <VBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <Label fx:id="name3" prefHeight="12.0" style="-fx-font-size: 8;" text="TESLA MODEL S">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <StackPane alignment="CENTER_RIGHT">
+                                                         <VBox.margin>
+                                                            <Insets top="4.0" />
+                                                         </VBox.margin>
+                                                         <children>
+                                                            <HBox prefHeight="12.0" prefWidth="136.0" style="-fx-background-color: #e7e9ec; -fx-background-radius: 10;">
+                                                               <children>
+                                                                  <HBox alignment="CENTER_RIGHT" prefHeight="12.0" prefWidth="73.0" style="-fx-background-color: #4967bc; -fx-background-radius: 20 0 0 20;" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="8.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="32.0" prefWidth="31.0" />
+                                                <VBox alignment="CENTER" prefHeight="32.0" prefWidth="19.0">
+                                                   <children>
+                                                      <Label style="-fx-font-size: 12;" text="6">
+                                                         <graphic>
+                                                            <FontAwesomeIcon glyphName="EJECT" size=".8em" />
+                                                         </graphic>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <effect>
+                                                <DropShadow height="1.0" offsetY="2.0" radius="0.0" width="0.0">
+                                                   <color>
+                                                      <Color red="0.6800000071525574" green="0.63919997215271" blue="0.63919997215271" opacity="0.29118773341178894" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox fx:id="rank4" alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <Label fx:id="rankVal4" alignment="CENTER" prefHeight="20.0" prefWidth="24.0" style="-fx-font-size: 14;" text="4">
+                                                   <font>
+                                                      <Font size="5.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER" maxHeight="32.0" maxWidth="32.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #f5f7f9; -fx-background-radius: 50%;">
+                                                   <children>
+                                                      <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../Images/logo/car_logo/Rolls-Royce-Logo.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                                <VBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <Label fx:id="name4" prefHeight="12.0" style="-fx-font-size: 8;" text="TESLA MODEL S">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <StackPane alignment="CENTER_RIGHT">
+                                                         <VBox.margin>
+                                                            <Insets top="4.0" />
+                                                         </VBox.margin>
+                                                         <children>
+                                                            <HBox prefHeight="12.0" prefWidth="136.0" style="-fx-background-color: #e7e9ec; -fx-background-radius: 10;">
+                                                               <children>
+                                                                  <HBox alignment="CENTER_RIGHT" prefHeight="12.0" prefWidth="93.0" style="-fx-background-color: #bcb04f; -fx-background-radius: 20 0 0 20;" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="8.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="32.0" prefWidth="31.0" />
+                                                <VBox alignment="CENTER" prefHeight="32.0" prefWidth="19.0">
+                                                   <children>
+                                                      <Label style="-fx-font-size: 12;" text="6">
+                                                         <graphic>
+                                                            <FontAwesomeIcon glyphName="EJECT" size=".8em" />
+                                                         </graphic>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <effect>
+                                                <DropShadow height="1.0" offsetY="2.0" radius="0.0" width="0.0">
+                                                   <color>
+                                                      <Color red="0.6800000071525574" green="0.63919997215271" blue="0.63919997215271" opacity="0.29118773341178894" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox fx:id="rank5" alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <Label fx:id="rankVal5" alignment="CENTER" prefHeight="20.0" prefWidth="24.0" style="-fx-font-size: 14;" text="8">
+                                                   <font>
+                                                      <Font size="5.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER" maxHeight="32.0" maxWidth="32.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #f5f7f9; -fx-background-radius: 50%;">
+                                                   <children>
+                                                      <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../Images/logo/car_logo/bugatti-logo.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                                <VBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <Label fx:id="name5" prefHeight="12.0" style="-fx-font-size: 8;" text="TESLA MODEL S">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <StackPane alignment="CENTER_RIGHT">
+                                                         <VBox.margin>
+                                                            <Insets top="4.0" />
+                                                         </VBox.margin>
+                                                         <children>
+                                                            <HBox prefHeight="12.0" prefWidth="136.0" style="-fx-background-color: #e7e9ec; -fx-background-radius: 10;">
+                                                               <children>
+                                                                  <HBox alignment="CENTER_RIGHT" prefHeight="13.0" prefWidth="58.0" style="-fx-background-color: black; -fx-background-radius: 20 0 0 20;" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="8.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="32.0" prefWidth="31.0" />
+                                                <VBox alignment="CENTER" prefHeight="48.0" prefWidth="26.0" style="-fx-background-size: 12;">
+                                                   <children>
+                                                      <Label style="-fx-font-size: 12;" text="6">
+                                                         <graphic>
+                                                            <FontAwesomeIcon glyphName="EJECT" size=".8em" />
+                                                         </graphic>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <effect>
+                                                <DropShadow height="1.0" offsetY="2.0" radius="0.0" width="0.0">
+                                                   <color>
+                                                      <Color red="0.6800000071525574" green="0.63919997215271" blue="0.63919997215271" opacity="0.29118773341178894" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </HBox>
+                                          <HBox fx:id="rank6" alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <Label fx:id="rankVal6" alignment="CENTER" prefHeight="20.0" prefWidth="24.0" style="-fx-font-size: 14;" text="3">
+                                                   <font>
+                                                      <Font size="5.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER" maxHeight="32.0" maxWidth="32.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #f5f7f9; -fx-background-radius: 50%;">
+                                                   <children>
+                                                      <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../Images/logo/car_logo/bugatti-logo.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                                <VBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <Label fx:id="name6" style="-fx-font-size: 8;" text="TESLA MODEL S">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <StackPane alignment="CENTER_RIGHT">
+                                                         <VBox.margin>
+                                                            <Insets top="4.0" />
+                                                         </VBox.margin>
+                                                         <children>
+                                                            <HBox prefHeight="10.0" prefWidth="136.0" style="-fx-background-color: #e7e9ec; -fx-background-radius: 10;">
+                                                               <children>
+                                                                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="64.0" style="-fx-background-color: black; -fx-background-radius: 20 0 0 20;">
+                                                                     <children>
+                                                                        <Label fx:id="price6" style="-fx-font-size: 6;" text="\$ 124,000" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="11.0" />
+                                                                           </font>
+                                                                           <HBox.margin>
+                                                                              <Insets right="8.0" />
+                                                                           </HBox.margin>
+                                                                        </Label>
+                                                                     </children>
+                                                                  </HBox>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="8.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="32.0" prefWidth="31.0" />
+                                                <VBox alignment="CENTER" prefHeight="32.0" prefWidth="19.0">
+                                                   <children>
+                                                      <Label style="-fx-font-size: 8;" text="6">
+                                                         <graphic>
+                                                            <FontAwesomeIcon glyphName="EJECT" size=".8em" />
+                                                         </graphic>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <effect>
+                                                <DropShadow height="1.0" offsetY="2.0" radius="0.0" width="0.0">
+                                                   <color>
+                                                      <Color red="0.6800000071525574" green="0.63919997215271" blue="0.63919997215271" opacity="0.29118773341178894" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <effect>
+                              <DropShadow height="25.45" offsetX="4.0" offsetY="4.0" radius="11.855" width="23.97">
+                                 <color>
+                                    <Color opacity="0.10000000149011612" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="32.0" top="32.0" />
+         </padding>
+      </VBox>
+      <HBox prefHeight="48.0" prefWidth="1104.0" style="-fx-background-color: white;">
+         <children>
+            <HBox alignment="CENTER" maxHeight="48.0" prefHeight="48.0" prefWidth="300.0" style="-fx-background-radius: 15;">
+               <children>
+                  <FontAwesomeIcon fill="#908c8c" glyphName="SEARCH" size="2em">
+                     <HBox.margin>
+                        <Insets left="24.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <TextField prefHeight="48.0" prefWidth="314.0" promptText="Search here" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" maxHeight="55.0" maxWidth="55.0" minHeight="48.0" minWidth="48.0" prefHeight="55.0" prefWidth="55.0" style="-fx-background-radius: 30;">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/icon/profile2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets right="24.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox fx:id="confirmContainer" alignment="CENTER" prefHeight="800.0" prefWidth="1104.0" style="-fx-background-color: rgba(0,0,0,.3);" visible="false">
+         <children>
+            <VBox fx:id="confirmHolder" alignment="CENTER" maxHeight="320.0" opacity="0.0" prefHeight="318.0" prefWidth="500.0" spacing="8.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="59.0" prefWidth="500.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="56.0" prefWidth="56.0" style="-fx-background-color: #57c5a7; -fx-background-radius: 50%;">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="CHECK" size="3em" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="25.0" prefWidth="500.0">
+                     <children>
+                        <Label style="-fx-font-size: 20;" text="Transaction Successful!" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="21.0" prefWidth="500.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="225.0" style="-fx-font-size: 13; -fx-text-fill: #a8aaad;" text="Transaction ID: 43222234441">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="500.0">
+                     <children>
+                        <Label fx:id="transactionType" alignment="CENTER" prefHeight="22.0" prefWidth="77.0" style="-fx-font-size: 13; -fx-text-fill: #a8aaad;" text="Deposit:">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="amountLbl" alignment="CENTER" prefHeight="32.0" prefWidth="139.0" style="-fx-font-size: 24; -fx-text-fill: #57c5a7;" text="+$500">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="24.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="500.0">
+                     <children>
+                        <Button fx:id="okBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: black;" text="Confirm" textFill="#80ffa4">
+                           <effect>
+                              <DropShadow height="15.07" offsetX="2.0" offsetY="2.0" radius="4.07" width="3.21">
+                                 <color>
+                                    <Color opacity="0.10000000149011612" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="24.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

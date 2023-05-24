@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="combinePane"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="CarShop.Control.combinController">
+<left>
+    <fx:include source="Menu.fxml"/>
+</left>
+<center>
+    <fx:include source="Dashboard.fxml"/>
+</center>
+</BorderPane>

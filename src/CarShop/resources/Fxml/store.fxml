@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="800.0" maxWidth="1104.0" prefHeight="800.0" prefWidth="1104.0" style="-fx-background-color: white;" stylesheets="@../Styles/store.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarShop.Control.storeController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox maxHeight="48.0" minHeight="48.0" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="48.0" prefWidth="232.0" style="-fx-background-color: white; -fx-background-radius: 15;">
+                     <children>
+                        <FontAwesomeIcon fill="#908c8c" glyphName="SEARCH" size="2em">
+                           <HBox.margin>
+                              <Insets left="24.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <TextField prefHeight="48.0" prefWidth="373.0" promptText="Search here" style="-fx-background-color: transparent;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="56.0" prefWidth="640.0" spacing="8.0">
+                     <children>
+                        <Button fx:id="trendingBtn" mnemonicParsing="false" prefHeight="32.0" prefWidth="104.0" style="-fx-background-color: black; -fx-background-radius: 16;" text="Trending" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="104.0" style="-fx-background-color: #f6f6f6; -fx-background-radius: 16;" text="Tesla">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="104.0" style="-fx-background-color: #f6f6f6; -fx-background-radius: 16;" text="Bugatti">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="104.0" style="-fx-background-color: #f6f6f6; -fx-background-radius: 16;" text="Bugatti">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="104.0" style="-fx-background-color: #f6f6f6; -fx-background-radius: 16;" styleClass="sliding-rect" text="Ford" />
+                     </children>
+                  </HBox>
+                  <StackPane>
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="55.0" maxWidth="55.0" minHeight="48.0" minWidth="46.0" prefHeight="48.0" prefWidth="46.0" style="-fx-background-radius: 30;">
+                           <children>
+                              <ImageView fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/other/notification-2.jpeg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </HBox>
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="21.0" style="-fx-background-color: #f436a4; -fx-background-radius: 50%;" text="13">
+                           <StackPane.margin>
+                              <Insets bottom="20.0" left="20.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="156.0" />
+                     </HBox.margin>
+                  </StackPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="704.0" prefWidth="1104.0" style="-fx-background-color: #f4f4f4; -fx-background-radius: 30 0 0 30;">
+               <children>
+                  <VBox maxWidth="480.0" prefHeight="692.0" prefWidth="480.0" style="-fx-padding: 32; -fx-background-radius: 40 0 0 40;">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="183.0" style="-fx-font-size: 24;" styleClass="bold" text="Tesla Model S">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="610.0" prefWidth="416.0" style="-fx-background-color: #f4f4f4; -fx-background-radius: 50;">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <Label style="-fx-font-size: 14;" text="Price" textFill="#a0a1a7" />
+                                          <HBox styleClass="font-size">
+                                             <children>
+                                                <Label styleClass="bold" text="\$" />
+                                                <Label fx:id="cnum6" styleClass="bold" text="1">
+                                                   <HBox.margin>
+                                                      <Insets left="4.0" />
+                                                   </HBox.margin></Label>
+                                                <Label fx:id="cnum5" styleClass="bold" text="8" />
+                                                <Label fx:id="cnum4" styleClass="bold" text="6" />
+                                                <Label styleClass="bold" text=",">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin></Label>
+                                                <Label fx:id="cnum3" styleClass="bold" text="4" />
+                                                <Label fx:id="cnum2" styleClass="bold" text="7" />
+                                                <Label fx:id="cnum1" styleClass="bold" text="4" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Region prefHeight="53.0" prefWidth="90.0" HBox.hgrow="ALWAYS" />
+                                    <VBox>
+                                       <children>
+                                          <Label style="-fx-font-size: 14;" text="Top speed" textFill="#a0a1a7" />
+                                          <Label fx:id="speed" text="35K">
+                                             <styleClass>
+                                                <String fx:value="bold" />
+                                                <String fx:value="font-size" />
+                                             </styleClass>
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font></Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <StackPane>
+                                 <VBox.margin>
+                                    <Insets top="16.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #f4f4f4;" visible="false">
+                                       <effect>
+                                          <GaussianBlur radius="6.25" />
+                                       </effect>
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/other/tat2.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <VBox fx:id="carImg" alignment="CENTER" prefHeight="401.0" prefWidth="416.0">
+                                       <children>
+                                          <ImageView fx:id="imgView" fitHeight="498.0" fitWidth="343.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/car/complete/Bugatti/Chiron/blue-white-vertical.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="32.0" right="32.0" top="24.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox maxWidth="624.0" prefHeight="754.0" prefWidth="624.0" style="-fx-padding: 32;">
+                     <children>
+                        <Label style="-fx-font-size: 24;" styleClass="bold" text="Trending">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="growBox" maxHeight="272.0" maxWidth="560.0" prefHeight="272.0" prefWidth="200.0" style="-fx-background-radius: 20;">
+                           <children>
+                              <HBox minWidth="264.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <VBox fx:id="carBackground1" prefHeight="200.0" prefWidth="264.0">
+                                       <children>
+                                          <VBox fx:id="carContainer1" prefHeight="194.0" prefWidth="262.0">
+                                             <children>
+                                                <HBox prefHeight="32.0" prefWidth="264.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" minWidth="32.0" prefWidth="32.0" style="-fx-background-radius: 30; -fx-background-color: black;">
+                                                         <children>
+                                                            <ImageView fitHeight="24.0" fitWidth="24.0" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../Images/logo/car_logo/tesla-logo.png" />
+                                                               </image>
+                                                               <effect>
+                                                                  <ColorAdjust brightness="1.0" />
+                                                               </effect>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="56.0">
+                                                         <children>
+                                                            <Label fx:id="brand1" minWidth="110.0" prefHeight="18.0" prefWidth="48.0" styleClass="font-size-15" text="TESLA" />
+                                                            <Label fx:id="model1" text="Model S">
+                                                               <styleClass>
+                                                                  <String fx:value="font-size-10" />
+                                                                  <String fx:value="bold" />
+                                                                  <String fx:value="gray-color" />
+                                                               </styleClass>
+                                                            </Label>
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                      <Region prefHeight="32.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                                      <VBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="82.0">
+                                                         <children>
+                                                            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="59.0" styleClass="font-size-15" text="Rank" textAlignment="RIGHT">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="#1">
+                                                               <font>
+                                                                  <Font size="8.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="gray-color" />
+                                                                  <String fx:value="font-size-10" />
+                                                               </styleClass>
+                                                            </Label>
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets right="4.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                      <HBox alignment="CENTER" minWidth="32.0" style="-fx-background-radius: 30; -fx-background-color: #d1d1d1;">
+                                                         <children>
+                                                            <FontAwesomeIcon fill="#4a4547" glyphName="TROPHY" size="24" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="123.0" prefWidth="242.0" style="-fx-background-radius: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="img1" fitHeight="120.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../Images/car/complete/Tesla/ModelS/red.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="8.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                             </padding>
+                                          </VBox>
+                                          <BorderPane fx:id="borderLbl1" prefHeight="24.0" prefWidth="262.0">
+                                             <left>
+                                                <HBox BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Label prefHeight="16.0" prefWidth="53.0" text="Pricing: ">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <HBox>
+                                                         <children>
+                                                            <Label styleClass="bold" text="\$" />
+                                                            <Label fx:id="num6" styleClass="bold" text="1">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="num5" styleClass="bold" text="8" />
+                                                            <Label fx:id="num4" styleClass="bold" text="6" />
+                                                            <Label styleClass="bold" text=",">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="num3" styleClass="bold" text="4" />
+                                                            <Label fx:id="num2" styleClass="bold" text="7" />
+                                                            <Label fx:id="num1" styleClass="bold" text="4" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                             </left>
+                                             <right>
+                                                <Label prefHeight="16.0" prefWidth="43.0" text="6%" BorderPane.alignment="CENTER">
+                                                   <graphic>
+                                                      <FontAwesomeIcon glyphName="CARET_UP" size="16" textOrigin="BOTTOM" />
+                                                   </graphic>
+                                                </Label>
+                                             </right>
+                                             <VBox.margin>
+                                                <Insets bottom="8.0" top="8.0" />
+                                             </VBox.margin>
+                                          </BorderPane>
+                                          <HBox fx:id="btnContainer1" prefHeight="40.0" prefWidth="262.0" style="-fx-background-radius: 0 0 20 20;">
+                                             <children>
+                                                <Button fx:id="buy1" minHeight="40.0" minWidth="72.0" mnemonicParsing="false" prefWidth="131.0" style="-fx-background-color: #00033a;" text="Buy Now" textFill="WHITE" />
+                                                <Button fx:id="cart" minHeight="40.0" mnemonicParsing="false" prefWidth="131.0" style="-fx-background-color: transparent;" text="Add Cart">
+                                                   <graphic>
+                                                      <FontAwesomeIcon glyphName="SHOPPING_CART" />
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                                 <effect>
+                                    <DropShadow height="30.0" offsetX="5.0" offsetY="5.0" radius="14.5" width="30.0">
+                                       <color>
+                                          <Color opacity="0.20000000298023224" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </HBox>
+                              <HBox minWidth="264.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <HBox.margin>
+                                    <Insets left="32.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <VBox fx:id="carBackground2" prefHeight="200.0" prefWidth="264.0">
+                                       <children>
+                                          <VBox fx:id="carContainer2" prefHeight="194.0" prefWidth="262.0">
+                                             <children>
+                                                <HBox prefHeight="32.0" prefWidth="264.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" minWidth="32.0" prefWidth="32.0" style="-fx-background-radius: 30; -fx-background-color: #4b4547;">
+                                                         <children>
+                                                            <ImageView fitHeight="24.0" fitWidth="24.0" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../Images/logo/car_logo/mercedes-logo.png" />
+                                                               </image>
+                                                               <effect>
+                                                                  <ColorAdjust brightness="1.0" />
+                                                               </effect>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="90.0">
+                                                         <children>
+                                                            <Label fx:id="brand2" minWidth="110.0" prefHeight="18.0" prefWidth="75.0" styleClass="font-size-15" text="Bugatti" />
+                                                            <Label fx:id="model2" text="Mistral">
+                                                               <font>
+                                                                  <Font size="8.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="font-size-10" />
+                                                                  <String fx:value="bold" />
+                                                                  <String fx:value="gray-color" />
+                                                               </styleClass>
+                                                            </Label>
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                      <Region prefHeight="32.0" prefWidth="5.0" HBox.hgrow="ALWAYS" />
+                                                      <VBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="50.0">
+                                                         <children>
+                                                            <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="46.0" styleClass="font-size-15" text="Rank" textAlignment="RIGHT">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="#23">
+                                                               <font>
+                                                                  <Font size="8.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="font-size-10" />
+                                                                  <String fx:value="gray-color" />
+                                                               </styleClass>
+                                                            </Label>
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets right="4.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                      <HBox alignment="CENTER" minWidth="32.0" style="-fx-background-radius: 30; -fx-background-color: #d1d1d1;">
+                                                         <children>
+                                                            <FontAwesomeIcon fill="#4a4547" glyphName="TROPHY" size="24" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="127.0" prefWidth="231.0" style="-fx-background-radius: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="img2" fitHeight="110.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../Images/car/complete/Bugatti/Mistral/yellow.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="8.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                             </padding>
+                                          </VBox>
+                                          <BorderPane prefHeight="24.0" prefWidth="262.0">
+                                             <left>
+                                                <HBox BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Label prefHeight="16.0" prefWidth="53.0" text="Pricing: ">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <HBox>
+                                                         <children>
+                                                            <Label styleClass="bold" text="\$" />
+                                                            <Label fx:id="num61" styleClass="bold" text="2">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="num51" styleClass="bold" text="3" />
+                                                            <Label fx:id="num41" styleClass="bold" text="2" />
+                                                            <Label styleClass="bold" text=",">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="num31" styleClass="bold" text="4" />
+                                                            <Label fx:id="num21" styleClass="bold" text="9" />
+                                                            <Label fx:id="num11" styleClass="bold" text="3" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                             </left>
+                                             <right>
+                                                <Label prefHeight="16.0" prefWidth="43.0" text="9%" BorderPane.alignment="CENTER">
+                                                   <graphic>
+                                                      <FontAwesomeIcon glyphName="CARET_UP" size="16" textOrigin="BOTTOM" />
+                                                   </graphic>
+                                                </Label>
+                                             </right>
+                                          </BorderPane>
+                                          <HBox prefHeight="40.0" prefWidth="262.0" style="-fx-background-radius: 0 0 20 20;">
+                                             <children>
+                                                <Button fx:id="buy2" minHeight="40.0" minWidth="72.0" mnemonicParsing="false" prefWidth="131.0" style="-fx-background-color: #00033a;" text="Buy Now" textFill="WHITE" />
+                                                <Button minHeight="40.0" mnemonicParsing="false" prefWidth="131.0" style="-fx-background-color: transparent;" text="Add Cart">
+                                                   <graphic>
+                                                      <FontAwesomeIcon glyphName="SHOPPING_CART" />
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                                 <effect>
+                                    <DropShadow height="30.0" offsetX="5.0" offsetY="5.0" radius="14.5" width="30.0">
+                                       <color>
+                                          <Color opacity="0.20000000298023224" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="32.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="272.0" prefWidth="200.0" style="-fx-background-radius: 20;">
+                           <children>
+                              <HBox style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <VBox fx:id="carBackground3" prefHeight="200.0" prefWidth="264.0">
+                                       <children>
+                                          <VBox fx:id="carContainer3" prefHeight="194.0" prefWidth="262.0">
+                                             <children>
+                                                <HBox prefHeight="32.0" prefWidth="264.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" minWidth="32.0" prefWidth="32.0" style="-fx-background-radius: 30; -fx-background-color: black;">
+                                                         <children>
+                                                            <ImageView fitHeight="24.0" fitWidth="24.0" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../Images/logo/car_logo/bugatti-logo(1).png" />
+                                                               </image>
+                                                               <effect>
+                                                                  <ColorAdjust />
+                                                               </effect>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="71.0">
+                                                         <children>
+                                                            <Label fx:id="brand3" minWidth="110.0" prefHeight="18.0" prefWidth="57.0" text="Bugatti" />
+                                                            <Label fx:id="model3" text="Chevron">
+                                                               <font>
+                                                                  <Font size="8.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="bold" />
+                                                                  <String fx:value="font-size-10" />
+                                                                  <String fx:value="gray-color" />
+                                                               </styleClass>
+                                                            </Label>
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                      <Region prefHeight="32.0" prefWidth="84.0" HBox.hgrow="ALWAYS" />
+                                                      <VBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="103.0">
+                                                         <children>
+                                                            <Label alignment="CENTER_RIGHT" minWidth="50.0" prefHeight="18.0" prefWidth="46.0" styleClass="font-size-15" text="Rank">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="#70">
+                                                               <font>
+                                                                  <Font size="8.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="gray-color" />
+                                                                  <String fx:value="font-size-10" />
+                                                               </styleClass>
+                                                            </Label>
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets right="4.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                      <HBox alignment="CENTER" minWidth="32.0" style="-fx-background-radius: 30; -fx-background-color: #d1d1d1;">
+                                                         <children>
+                                                            <FontAwesomeIcon glyphName="TROPHY" size="24" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="123.0" prefWidth="242.0" style="-fx-background-radius: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="img3" fitHeight="110.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../Images/car/complete/Bugatti/Chiron/blue.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="8.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                             </padding>
+                                          </VBox>
+                                          <BorderPane prefHeight="24.0" prefWidth="262.0">
+                                             <left>
+                                                <HBox BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Label prefHeight="16.0" prefWidth="53.0" text="Pricing: ">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <HBox>
+                                                         <children>
+                                                            <Label styleClass="bold" text="\$" />
+                                                            <Label fx:id="num62" styleClass="bold" text="3">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="num52" styleClass="bold" text="8" />
+                                                            <Label fx:id="num42" styleClass="bold" text="6" />
+                                                            <Label styleClass="bold" text=",">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="num32" styleClass="bold" text="4" />
+                                                            <Label fx:id="num22" styleClass="bold" text="7" />
+                                                            <Label fx:id="num12" styleClass="bold" text="4" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                             </left>
+                                             <right>
+                                                <Label prefHeight="16.0" prefWidth="43.0" text="6%" BorderPane.alignment="CENTER">
+                                                   <graphic>
+                                                      <FontAwesomeIcon glyphName="CARET_UP" size="16" textOrigin="BOTTOM" />
+                                                   </graphic>
+                                                </Label>
+                                             </right>
+                                          </BorderPane>
+                                          <HBox prefHeight="40.0" prefWidth="262.0" style="-fx-background-radius: 0 0 20 20;">
+                                             <children>
+                                                <Button fx:id="buy3" minHeight="40.0" minWidth="72.0" mnemonicParsing="false" prefWidth="131.0" style="-fx-background-color: #00033a;" text="Buy Now" textFill="WHITE" />
+                                                <Button minHeight="40.0" mnemonicParsing="false" prefWidth="131.0" style="-fx-background-color: transparent;" text="Add Cart">
+                                                   <graphic>
+                                                      <FontAwesomeIcon glyphName="SHOPPING_CART" />
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                                 <effect>
+                                    <DropShadow height="30.0" offsetX="5.0" offsetY="5.0" radius="14.5" width="30.0">
+                                       <color>
+                                          <Color opacity="0.20000000298023224" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </HBox>
+                              <HBox style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <HBox.margin>
+                                    <Insets left="32.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <VBox fx:id="carBackground4" prefHeight="200.0" prefWidth="264.0">
+                                       <children>
+                                          <VBox fx:id="carContainer4" prefHeight="194.0" prefWidth="262.0">
+                                             <children>
+                                                <HBox prefHeight="32.0" prefWidth="264.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" minWidth="32.0" prefWidth="32.0" style="-fx-background-radius: 30; -fx-background-color: black;">
+                                                         <children>
+                                                            <ImageView fitHeight="24.0" fitWidth="24.0" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../Images/logo/car_logo/Ford-Logo.png" />
+                                                               </image>
+                                                               <effect>
+                                                                  <ColorAdjust brightness="1.0" contrast="-0.71" hue="-0.48" saturation="-0.12" />
+                                                               </effect>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="102.0">
+                                                         <children>
+                                                            <Label fx:id="brand4" minWidth="110.0" prefHeight="18.0" prefWidth="90.0" text="Rolls Royce" />
+                                                            <Label fx:id="model4" text="Phantom">
+                                                               <font>
+                                                                  <Font size="8.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="bold" />
+                                                                  <String fx:value="font-size-10" />
+                                                                  <String fx:value="gray-color" />
+                                                               </styleClass>
+                                                            </Label>
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                      <Region prefHeight="32.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                                      <VBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="58.0">
+                                                         <children>
+                                                            <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="40.0" styleClass="font-size-15" text="Rank">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="#23">
+                                                               <font>
+                                                                  <Font size="8.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="font-size-10" />
+                                                                  <String fx:value="gray-color" />
+                                                               </styleClass>
+                                                            </Label>
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets right="4.0" />
+                                                         </HBox.margin>
+                                                      </VBox>
+                                                      <HBox alignment="CENTER" minWidth="32.0" style="-fx-background-radius: 30; -fx-background-color: #d1d1d1;">
+                                                         <children>
+                                                            <FontAwesomeIcon glyphName="TROPHY" size="24" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="123.0" prefWidth="242.0" style="-fx-background-radius: 10;">
+                                                   <children>
+                                                      <ImageView fx:id="img4" fitHeight="110.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../Images/car/complete/Rolls-Royce/phantom/green.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets top="4.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="8.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                             </padding>
+                                          </VBox>
+                                          <BorderPane prefHeight="24.0" prefWidth="262.0">
+                                             <left>
+                                                <HBox BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Label prefHeight="16.0" prefWidth="53.0" text="Pricing: ">
+                                                         <HBox.margin>
+                                                            <Insets left="4.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <HBox>
+                                                         <children>
+                                                            <Label styleClass="bold" text="\$" />
+                                                            <Label fx:id="num63" styleClass="bold" text="1">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="num53" styleClass="bold" text="3" />
+                                                            <Label fx:id="num43" styleClass="bold" text="6" />
+                                                            <Label styleClass="bold" text=",">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="num33" styleClass="bold" text="2" />
+                                                            <Label fx:id="num23" styleClass="bold" text="7" />
+                                                            <Label fx:id="num13" styleClass="bold" text="4" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                             </left>
+                                             <right>
+                                                <Label prefHeight="16.0" prefWidth="43.0" text="6%" BorderPane.alignment="CENTER">
+                                                   <graphic>
+                                                      <FontAwesomeIcon glyphName="CARET_UP" size="16" textOrigin="BOTTOM" />
+                                                   </graphic>
+                                                </Label>
+                                             </right>
+                                          </BorderPane>
+                                          <HBox prefHeight="40.0" prefWidth="262.0" style="-fx-background-radius: 0 0 20 20;">
+                                             <children>
+                                                <Button fx:id="buy4" minHeight="40.0" minWidth="72.0" mnemonicParsing="false" prefWidth="131.0" style="-fx-background-color: #00033a;" text="Buy Now" textFill="WHITE" />
+                                                <Button minHeight="40.0" mnemonicParsing="false" prefWidth="131.0" style="-fx-background-color: transparent;" text="Add Cart">
+                                                   <graphic>
+                                                      <FontAwesomeIcon glyphName="SHOPPING_CART" />
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                                 <effect>
+                                    <DropShadow height="30.0" offsetX="5.0" offsetY="5.0" radius="14.5" width="30.0">
+                                       <color>
+                                          <Color opacity="0.20000000298023224" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="32.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <Label prefHeight="48.0" prefWidth="74.0" text="Balance: $">
+                     <HBox.margin>
+                        <Insets left="32.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="subBalance" prefHeight="48.0" prefWidth="159.0" />
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" prefHeight="48.0" prefWidth="62.0" text="02/10">
+                     <HBox.margin>
+                        <Insets right="8.0" />
+                     </HBox.margin>
+                  </Label>
+               </children></HBox>
+         </children>
+      </VBox>
+      <HBox fx:id="right" alignment="TOP_RIGHT" prefHeight="800.0" prefWidth="1104.0" visible="false">
+         <children>
+            <VBox fx:id="blank" opacity="0.3" prefHeight="785.0" prefWidth="633.0" />
+            <VBox fx:id="rightPane" alignment="TOP_CENTER" minHeight="758.0" minWidth="446.0" prefHeight="760.0" prefWidth="446.0" spacing="32.0" style="-fx-background-color: white; -fx-border-radius: 20; -fx-background-radius: 10;">
+               <children>
+                  <HBox alignment="TOP_RIGHT" prefHeight="32.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <Label prefHeight="43.0" prefWidth="310.0" style="-fx-font-size: 24;" text="Order confirmation" />
+                        <Region prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                     <padding>
+                        <Insets left="24.0" right="8.0" />
+                     </padding>
+                  </HBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="395.0" prefWidth="398.0" style="-fx-border-radius: 20;" styleClass="setBorder">
+                     <VBox.margin>
+                        <Insets top="24.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="128.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="199.0" spacing="16.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 18;" text="Order ID">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label styleClass="setTextSize" text="1293000400" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="16.0" left="24.0" top="16.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="199.0" styleClass="alignment">
+                                 <children>
+                                    <Label styleClass="setHeadingSize" text="Item" />
+                                    <HBox prefHeight="16.0" prefWidth="173.0">
+                                       <children>
+                                          <Label prefHeight="36.0" prefWidth="102.0" styleClass="setTextSize" text="Tesla Model S" />
+                                          <Label prefHeight="17.0" prefWidth="41.0" styleClass="setTextSize" text="Qty.1">
+                                             <HBox.margin>
+                                                <Insets left="24.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="356.0" maxWidth="356.0" minHeight="2.0" prefHeight="2.0" prefWidth="356.0" style="-fx-background-color: #f2f3f7;" />
+                        <HBox prefHeight="128.0" prefWidth="200.0">
+                           <children>
+                              <VBox minWidth="199.0" prefHeight="100.0" prefWidth="158.0" styleClass="alignment">
+                                 <children>
+                                    <Label styleClass="setHeadingSize" text="Commision Fee" />
+                                    <Label styleClass="setTextSize" text="1.3%" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="196.0" styleClass="alignment">
+                                 <children>
+                                    <Label prefHeight="21.0" prefWidth="121.0" styleClass="setHeadingSize" text="Item Value" />
+                                    <Label fx:id="orderPrice" styleClass="setTextSize" text="\$128,999" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="356.0" maxWidth="356.0" minHeight="2.0" prefHeight="2.0" prefWidth="356.0" style="-fx-background-color: #f2f3f7;" />
+                        <HBox prefHeight="128.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="199.0" styleClass="alignment">
+                                 <children>
+                                    <Label styleClass="setHeadingSize" text="Total Value">
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label fx:id="totalPrice" style="-fx-font-size: 24; -fx-text-fill: #7e3db8;" styleClass="setTextSize" text="\$150,000" textFill="#7e3db8">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="158.0" styleClass="alignment">
+                                 <children>
+                                    <Label prefHeight="16.0" prefWidth="76.0" styleClass="setHeadingSize" text="Payment" />
+                                    <Label styleClass="setTextSize" text="Card 5689" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Button fx:id="confirmBtn" minWidth="398.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="398.0" style="-fx-font-size: 16; -fx-background-color: #8a15be;" text="Confirm" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin>
+                           <effect>
+                              <DropShadow height="30.0" offsetX="5.0" offsetY="5.0" radius="14.5" width="30.0">
+                                 <color>
+                                    <Color opacity="0.3180076479911804" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button fx:id="cancelBtn" minWidth="398.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="398.0" style="-fx-font-size: 16; -fx-background-color: #f4f5f9;" text="Cancel" textFill="#c9c4c4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="24.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="24.0" right="24.0" top="48.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="16.0" top="16.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

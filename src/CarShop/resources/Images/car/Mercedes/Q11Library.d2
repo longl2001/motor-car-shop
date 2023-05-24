@@ -1,0 +1,91 @@
+Book: {
+  shape: class
+
+  -issn: string
+  -author: Author
+
+  +getISSN(): string
+  +getAuthor(): Author
+}
+
+Author: {
+  shape: class
+
+  -firstName: string
+  -lastName: string
+
+  +getFirstName(): string
+  +setFirstName(firstName string): void
+  +getLastName() string
+  +setLastName(lastName string): void
+}
+
+Library: {
+  shape: class
+
+  -location: string
+  -books: "[]Book"
+
+  +getLocation(): string
+  +setLocation(location string): void
+}
+
+Book -> Author: {
+  target-arrowhead: {
+    shape: diamond
+  }
+}
+
+Library -> Book: {
+  target-arrowhead: {
+    shape: diamond
+  }
+}
+
+Library -> Member: {
+  target-arrowhead: {
+    shape: diamond
+  }
+}
+
+Member: {
+  shape: class
+
+  -id: int
+  -name: string
+  -borrowing: Borrowing
+
+  +getID(): int
+  +setID(id int): void
+}
+
+Borrowing: {
+  shape: class
+
+  -dueDay: int
+  -dueMonth: int
+  -dueYear: int
+  -book: Book
+
+  +setDay(day int): void
+  +getDay(): int
+  +setMonth(month int): void
+  +getMonth(): int
+  +setYear(year int): void
+  +getYear(): int
+  +setBook(book Book): void
+  +getBook(): Book
+}
+
+Member -> Borrowing: {
+  target-arrowhead: {
+    shape: diamond
+    style.filled: true
+  }
+}
+
+Borrowing -> Book: {
+  target-arrowhead: {
+    shape: diamond
+  }
+}

@@ -1,0 +1,46 @@
+.root{
+    -fx-font-family:"sansserif";
+    -fx-font-weight:bold;
+}
+
+.text{
+    -fx-font-size:16;
+}
+/*line chart set up*/
+.chart-series-line{
+    -fx-stroke-width:2.5px;
+}
+.default-color0.chart-series-line{
+    -fx-stroke:transparent;
+}
+.default-color1.chart-series-line{
+    -fx-stroke:#70b242;
+}
+/*pieChart setup*/
+.chart-pie-label{
+    -fx-font-size:12;
+    -fx-fill:#434343;
+}
+
+/*Rank section*/
+.scroll-bar:vertical {
+    -fx-background-color: white;
+    -fx-fill:black;
+
+}
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button,
+.scroll-bar:horizontal .increment-button,
+.scroll-bar:horizontal .decrement-button {
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+/* Headings */
+#portfolio,#balance,#rank,#inventory{
+-fx-font-size:20;
+-fx-font-family: "sansserif";
+}
+

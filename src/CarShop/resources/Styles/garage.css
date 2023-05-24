@@ -1,0 +1,30 @@
+.progress-background{
+    -fx-background-color: #f2f2f2;
+    -fx-pref-height:4;
+}
+.progress-color{
+    -fx-background-color:#732cb8;
+}
+.progress-background2{
+    -fx-background-color: white;
+    -fx-pref-height:4;
+}
+.font{
+    -fx-font-family:"sansserif";
+}
+.heading{
+    -fx-font-size:24;
+}
+.heading2{
+    -fx-font-size:21;
+}
+
+/*
+stage 1 car
+*/
+.background-stage1{
+    -fx-background-image: url("../Images/car/Bugatti/red.png");
+        -fx-background-size:contain;
+        -fx-background-position: center;
+            -fx-background-repeat: no-repeat;
+}

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="cs380:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/cs380_jar</output-path>
+    <root id="archive" name="cs380.jar">
+      <element id="module-output" name="cs380" />
+    </root>
+  </artifact>
+</component>

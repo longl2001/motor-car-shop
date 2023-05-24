@@ -1,0 +1,53 @@
+#card1{
+-fx-background-color: linear-gradient(from 100% 0% to 0% 100%, #8348eb 0%,#1b1a1f 30%,#1b1a1f 100%);
+}
+#card2{
+-fx-background-color: linear-gradient(from 100% 0% to 0% 100%, #3bb0b2  0%,#1b1a1f 30%,#1b1a1f 100%);
+}
+#card3{
+-fx-background-color: linear-gradient(from 100% 0% to 0% 100%, #e07b3a 0%,#1b1a1f 30%, #1b1a1f 100%);
+}
+.hover-effect:hover{
+    -fx-scale-x:1.1;
+    -fx-scale-y:1.1;
+
+}
+.scroll-pane{
+    -fx-background:#232228;
+    -fx-background-color:#232228;
+}
+.scroll-bar:vertical .thumb {
+-fx-background-color:
+    black,
+    linear-gradient(to right, derive(#1a191e,95%), derive(#1a191e,10%)),
+    linear-gradient(to right, derive(#1a191e,38%), derive(#1a191e,-16%));
+-fx-background-insets: 0, 1, 2;
+-fx-background-radius: 0.5em; /* makes sure this remains circular */
+}
+#vBox HBox{
+    -fx-border-color:transparent transparent #383641 transparent;
+}
+#vBox HBox:hover{
+    -fx-cursor:hand;
+        -fx-background-color:#292c2d;
+        -fx-text-fill:white;
+}
+.hbox Button{
+    -fx-background-color:#fefefe;
+    -fx-background-radius:10;
+}
+.hbox Button:hover{
+    -fx-background-color:red;
+}
+.bgImg{
+    -fx-background-image:url("../Images/graph.png");
+}
+.blackHover HBox:hover {
+    -fx-background-color:#191e28;
+}
+.blackHover HBox:hover #whitetxt {
+    -fx-text-fill:white;
+}
+
+
+

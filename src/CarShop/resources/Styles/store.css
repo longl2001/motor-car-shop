@@ -1,0 +1,58 @@
+.root{
+    -fx-font-family: "sansserif";
+}
+.bold{
+    -fx-font-weight:bold;
+}
+.txt-black{
+    -fx-text-fill:black;
+}
+.font-size Label{
+    -fx-font-size:25;
+}
+
+.alignment{
+    -fx-padding:16 0 16 24;
+    -fx-alignment:center_left;
+    -fx-spacing:16;
+}
+.setHeadingSize{
+    -fx-font-size:18;
+}
+.setTextSize{
+    -fx-font-size:15;
+    -fx-text-fill:#868789;
+}
+.setBorder{
+    -fx-border-color: #f2f3f7 ;
+    -fx-border-width:2px;
+}
+.font-size-10{
+    -fx-font-size:10;
+}
+.font-size-15{
+    -fx-font-size:15;
+}
+.gray-color{
+    -fx-text-fill:#868789;
+}
+.fill-gray Label{
+    -fx-text-fill:#868789;
+}
+
+#brand1,#brand2,#brand3,#brand4{
+    -fx-font-weight:bold;
+    -fx-text-fill:black;
+    -fx-font-size:15;
+     -fx-font-family: "sansserif";
+}
+#model1,#model2,#model3,#model4{
+    -fx-text-fill:#868789;
+    -fx-font-size:12;
+     -fx-font-family: "sansserif";
+}
+#carBackground1,#carBackground2,#carBackground3,#carBackground4{
+    -fx-padding:8;
+    -fx-background-radius:20;
+    -fx-background-color: rgba(0,0,0,.05);
+}
